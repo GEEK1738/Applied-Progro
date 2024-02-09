@@ -1,0 +1,63 @@
+﻿@page
+@model POE.Pages.Good.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<head>
+    <style>
+        body {
+            background-color: orange;
+            aa
+        }
+
+        h1 {
+            color: blue;
+        }
+
+        p {
+            color: red;
+        }
+
+    </style>
+</head>
+
+<h1>Edit</h1>
+
+<h4>Goods</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Goods.Id" />
+            <div class="form-group">
+                <label asp-for="Goods.Name" class="control-label"></label>
+                <input asp-for="Goods.Name" class="form-control" />
+                <span asp-validation-for="Goods.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Goods.Date" class="control-label"></label>
+                <input asp-for="Goods.Date" class="form-control" />
+                <span asp-validation-for="Goods.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Goods.NumberOfItems" class="control-label"></label>
+                <input asp-for="Goods.NumberOfItems" class="form-control" />
+                <span asp-validation-for="Goods.NumberOfItems" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,60 @@
+﻿@page
+@model POE.Pages.DonateGoodsModel
+@{
+    ViewData["Title"] = "Donate Goods";
+}
+
+<head>
+    <style>
+        body {
+            background-color: orange;
+        }
+
+        h1 {
+            color: blue;
+        }
+
+        p {
+            color: red;
+        }
+    </style>
+</head>
+
+<div class="text-center">
+    <h1 class="display-4">Donate goods here: </h1>
+
+</div>
+<form
+    class="model-content" action="/action_page.php">
+<div class=" container">
+
+    <label for="fname"><b>Donor</b></label>
+    <input type="text" placeholder="Enter Name" name="Name" required>
+
+    <h2>Goods type</h2>
+    <p>Choose Your Donation Type:</p>
+
+        <input type="radio" id=" html" name="fav_language" value="Clothes" />
+        <label for="Clothes">Clothes</label><br>
+
+        <input type="radio" id="Food" name="fav_language" value="Food" />
+        <label for="Food">Food</label><br>
+
+        <input type="radio" id="Select All" name="fav_language" value="Select All" />
+        <label for="Select All">Select All</label><br>
+
+        <input type="datetime-local"  value="+010000-01-01T05:00" /> <br>
+        <label for="tentacles">Number of items(1-100): </label>
+
+        <input type="number" id="tentacles" name="tentacles" min="1" max="100" />
+
+</div class="clearfix">
+    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    <button type="submit" class="signup">Submit</button>
+</div>
+
+    </div>
+
+</form>
+    
+

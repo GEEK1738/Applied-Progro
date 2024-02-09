@@ -1,0 +1,77 @@
+﻿@page
+@model POE.Pages.AllocateModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+<html>
+<head>
+    <title>Disaster Relief Web Application</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Disaster Relief Web Application</h1>
+
+    <form action="/allocate_money" method="post">
+        <input type="hidden" name="disaster_id" value="1">
+        <input type="number" name="amount" placeholder="Enter amount to allocate">
+        <button type="submit">Allocate</button>
+    </form>
+
+    <form action="/allocate_goods" method="post">
+        <input type="hidden" name="disaster_id" value="1">
+        <input type="number" name="quantity" placeholder="Enter quantity of goods to allocate">
+        <select name="good_id">
+            <option value="1">Food</option>
+            <option value="2">Water</option>
+            <option value="3">Shelter</option>
+        </select>
+        <button type="submit">Allocate</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Good</th>
+                <th>Available Quantity</th>
+                <th>Allocated Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Food</td>
+                <td>100</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Water</td>
+                <td>200</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Shelter</td>
+                <td>50</td>
+                <td>25</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
